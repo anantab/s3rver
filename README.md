@@ -71,9 +71,6 @@ Now you can access the served content at `http://mysite.local:4568/`
 
 The tests should be run by one of the active LTS versions. The CI Server runs the tests on the latest `6.x` and `8.x` releases.
 
-Be wary that Windows is not fully supported due to the way its filesystem works, so most tests that involve deleting objects will fail.
-Use Linux Subsystem for Windows to test if it's your primary environment.
-
 To run the test suite, first install the dependencies, then run `npm test`:
 
 ```bash
@@ -99,7 +96,7 @@ Creates a S3rver instance
 | cert | `string` \| `Buffer` |  | Certificate for running with TLS |
 | silent | `boolean` | `false` | Suppress log messages | 
 | directory | `string` |  | Data directory |
-| cors | `string` \| `Buffer` | [S3 Sample policy](test/resources/cors_sample_policy.xml) | Raw XML string or Buffer of CORS policy |
+| cors | `string` \| `Buffer` | [S3 Sample policy](cors_sample_policy.xml) | Raw XML string or Buffer of CORS policy |
 | indexDocument | `string` |  | Index document for static web hosting |
 | errorDocument | `string` |  | Error document for static web hosting |
 | removeBucketsOnClose | `boolean` | `false` | Remove all bucket data on server close |
